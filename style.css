@@ -1,101 +1,162 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background: url('bg.jpg');
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  /* background: url("bg.jpg"); */
 }
 
 p {
-    font-weight: 800;
+  font-weight: 800;
 }
 
 button {
-    background-color: #411530;
-    border: none;
-    color: #c7c7c7;
-    border-radius: 3px;
-    height: 25px;
-    width: 55px;
+  color: black;
+  border: solid 2px black;
+  background-color: transparent;
+  border-radius: 3px;
+  font-size: 2rem;
+  height: 3rem;
+  width: 8rem;
 }
 
 .our-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .boxes {
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
 }
 
 .progress {
-    border: 1px solid #c7c7c7;
-    border-right: none;
-    position: relative;
+  border: 1px solid #c7c7c7;
+  border-right: none;
+  position: relative;
 }
 
 .progress-inner {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #7ecc00;
-    opacity: 0.57;
-    transform: scaleX(0);
-    transform-origin: center left;
-    transition: transform .4s ease-out;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #7ecc00;
+  opacity: 0.57;
+  transform: scaleX(0);
+  transform-origin: center left;
+  transition: transform 0.4s ease-out;
 }
 
 .box {
-    height: 40px;
-    border-right: 1px solid #c7c7c7;
-    flex: 1;
+  height: 40px;
+  border-right: 1px solid #c7c7c7;
+  flex: 1;
 }
 
 .overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(255, 255, 255, .82);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: all .33s ease-out;
-    transform: scale(1.2);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.82);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.33s ease-out;
+  transform: scale(1.2);
 }
 
 body.overlay-is-open .overlay {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
 }
 
 .body.overlay-is-open .main-ui {
-    filter: blur(4px);
+  filter: blur(4px);
 }
 
 @keyframes showError {
-    50% {
-        color: red;
-        transform: scale(1.2);
-    }
+  50% {
+    color: red;
+    transform: scale(1.2);
+  }
 
-    100% {
-        color: #333;
-        transform: scale(1);
-    }
+  100% {
+    color: #333;
+    transform: scale(1);
+  }
 }
 
 .animate-wrong {
-    animation: .45s showError;
+  animation: 0.45s showError;
 }
 
 .problem {
-    text-align: center;
-    font-size: 6rem;
+  text-align: center;
+  font-size: 6rem;
+}
+
+/* custom themes */
+
+.theme-btns {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10rem;
+}
+
+.theme-btn {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 0.55rem;
+}
+
+.pastel {
+  background: linear-gradient(#ee6983, #ffb3b3, #ffdba4, #ffe9ae, #c1efff);
+  color: #E94560;
+}
+
+.twilight {
+  background: linear-gradient(#0078aa, #3ab4f2, #f2df3a, #f6f6f6);
+  color: aliceblue;
+}
+
+.forest {
+  background: linear-gradient(#1c6758, #3d8361, #d6cda4, #eef2e6);
+  color: aliceblue;
+}
+
+.sunset {
+  background: linear-gradient(#231955, #1f4690, #e8aa42, #ffe5b4);
+  color: aliceblue;
+}
+
+.goldenHues {
+  background: linear-gradient(#ffb319, #ffe194, #e8f6ef, #b8dfd8);
+  color: #231955;
+}
+
+.btn-custom {
+  color: aliceblue;
+  border: solid 2px aliceblue;
+  background-color: transparent;
+  border-radius: 3px;
+  font-size: 2rem;
+  height: 3rem;
+  width: 8rem;
+}
+
+.input-box{
+  color: aliceblue;
+  border: solid 2px aliceblue;
+  background-color: transparent;
+  border-radius: 3px;
+  font-size: 2rem;
+  height: 3rem;
+  width: 15rem;
 }
